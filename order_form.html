@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Verification Order Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f5f9;
+      color: #333;
+      padding: 40px;
+    }
+    .container {
+      max-width: 600px;
+      background: #fff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #0066cc;
+    }
+    label {
+      font-weight: 600;
+      margin-top: 10px;
+      display: block;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .payment-info {
+      background: #e6f2ff;
+      padding: 15px;
+      margin: 20px 0;
+      border-left: 5px solid #0066cc;
+    }
+    button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #004d99;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Number Verification & Google Voice Order Form</h2>
+    
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email or WhatsApp Number</label>
+      <input type="text" id="email" placeholder="Enter your contact" required>
+
+      <label for="service">Select Service</label>
+      <select id="service" required>
+        <option value="">-- Choose a service --</option>
+        <option value="google-voice">Google Voice Number – ₦9000</option>
+        <option value="usa-3500">USA Number – ₦3500</option>
+        <option value="usa-signal">USA Signal Number – ₦3000</option>
+        <option value="uk-number">UK Number – ₦7000</option>
+        <option value="social-media">Social Media/Dating Site Number – ₦3700</option>
+      </select>
+
+      <label for="platform">If Social Media, Select Platform</label>
+      <select id="platform">
+        <option value="">-- Select platform (if applicable) --</option>
+        <option>Facebook</option>
+        <option>Instagram</option>
+        <option>Twitter (X)</option>
+        <option>WhatsApp</option>
+        <option>TikTok</option>
+        <option>Bumble</option>
+        <option>Tinder</option>
+        <option>Hinge</option>
+        <option>Telegram</option>
+        <option>Snapchat</option>
+      </select>
+
+      <label for="notes">Any Special Instructions?</label>
+      <textarea id="notes" rows="4" placeholder="Enter any extra info (e.g. preferred area code)"></textarea>
+
+      <div class="payment-info">
+        <h4>Payment Details:</h4>
+        <p><strong>Account Name:</strong> Ariyo Oluwole</p>
+        <p><strong>Account Number:</strong> 6059849408</p>
+        <p><strong>Bank Name:</strong> Moniepoint MFB</p>
+        <p>Make payment before submitting this form.</p>
+      </div>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+</body>
+</html>
