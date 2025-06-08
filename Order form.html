@@ -2,8 +2,6 @@
 
 <html lang="en">
 <head>
-
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Order Form - Richie Khalifa Logs</title>
@@ -61,13 +59,17 @@
     <h2>Place Your Order</h2>
     <form action="#" method="post">
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+     <input type="text" id="customer-name" name="payer-name" required>
+<input type="number" id="payment-amount" name="payment-amount" required>
+<textarea id="payment-proof" name="payment-proof" rows="3" required></textarea>
+
+
 
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required>
 
       <label for="whatsapp">WhatsApp Number</label>
-      <input type="text" id="whatsapp" name="whatsapp" placeholder="+1..." required>
+      <input type="text" id="whatsapp" name="whatsapp" placeholder="+234..." required>
 
       <label for="product">Select a Service</label>
       <select id="product" name="product" required>
@@ -113,12 +115,13 @@
     <input type="number" id="payment-amount" required>
 
     <label for="payment-method">Payment Method</label>
-    <select id="payment-method" required>
-      <option value="">-- Select Method --</option>
-      <option value="bank_transfer">Bank Transfer</option>
-      <option value="mobile_money">Mobile Money</option>
-      <option value="POS">POS</option>
-    </select>
+    <select id="payment-method" name="payment-method" required>
+  <option value="">-- Select Method --</option>
+  <option value="bank_transfer">Bank Transfer</option>
+  <option value="mobile_money">Mobile Money</option>
+  <option value="POS">POS</option>
+</select>
+
 
     <label for="payment-proof">Proof of Payment (e.g. transaction ID or screenshot link)</label>
     <textarea id="payment-proof" rows="3" placeholder="Paste transaction ID or upload link here..." required></textarea>
@@ -138,7 +141,7 @@
     return false; // Prevent form from actually submitting
   }
 </script>
-<section class="verifications">
+<select class="verifications">
   <h2>Social Media Verification Numbers</h2>
   <p>Select from the platforms below. Each number is available for ₦3,700 only.</p>
 
@@ -164,6 +167,6 @@
       <p>Gmail/YouTube Verification</p>
     </div>
   </div>
-</section>
+</select>
 </body>
 </html>
