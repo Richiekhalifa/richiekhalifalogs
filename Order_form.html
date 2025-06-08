@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OrderForm - Richie Khalifa Logs</title>
+<link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: green;
+      padding: 10px;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: purple;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #005bbb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .note {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+<a href="index.html">Home</a>
+  <div class="form-container">
+    <h2>Place Your Order</h2>
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+     <input type="text" id="customer-name" name="payer-name" required>
+<input type="number" id="payment-amount" name="payment-amount" required>
+<textarea id="payment-proof" name="payment-proof" rows="3" required></textarea>
+
+
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="whatsapp">WhatsApp Number</label>
+      <input type="text" id="whatsapp" name="whatsapp" placeholder="+234..." required>
+
+      <label for="product">Select a Service</label>
+      <select id="product" name="product" required>
+        <option value="">-- Select One --</option>
+        <option value="nextplus">Next Plus – ₦6,500</option>
+        <option value="textplus">Text Plus – ₦6,500</option>
+        <option value="usa_whatsapp">USA WhatsApp – ₦3,500</option>
+        <option value="canada_whatsapp">Canada WhatsApp – ₦4,000</option>
+        <option value="uk_whatsapp">UK WhatsApp – ₦7,000</option>
+        <option value="google_voice">Google Voice – ₦9,000</option>
+        <option value="facebook_dating">Facebook Dating – ₦20,000+</option>
+        <option value="instagram_9yrs">Instagram (9 Years Old) – ₦6,500</option>
+        <option value="site_verification">Site Verification – ₦3,700</option>
+      </select>
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Enter any extra info here..."></textarea>
+
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <div class="note">
+      You'll be contacted via WhatsApp or email after submitting your order.
+    </div>
+  </div>
+<div class="form-container">
+  <h2>Payment Instructions</h2>
+
+  <p>Please make payment to the following account:</p>
+  <ul>
+    <li><strong>Account Name:</strong> ARIYO OLUWOLE</li>
+    <li><strong>Bank Name:</strong> Moniepoint</li>
+    <li><strong>Account Number:</strong> 6059849408</li>
+  </ul>
+
+  <p>After payment, fill in the details below to confirm your transaction:</p>
+
+  <form action="#" method="post" onsubmit="return showReceipt();">
+    <label for="payer-name">Your Name</label>
+    <input type="text" id="payer-name" required>
+
+    <label for="payment-amount">Amount Paid (₦)</label>
+    <input type="number" id="payment-amount" required>
+
+    <label for="payment-method">Payment Method</label>
+    <select id="payment-method" name="payment-method" required>
+  <option value="">-- Select Method --</option>
+  <option value="bank_transfer">Bank Transfer</option>
+  <option value="mobile_money">Mobile Money</option>
+  <option value="POS">POS</option>
+</select>
+
+
+    <label for="payment-proof">Proof of Payment (e.g. transaction ID or screenshot link)</label>
+    <textarea id="payment-proof" rows="3" placeholder="Paste transaction ID or upload link here..." required></textarea>
+
+    <button type="submit">Submit Payment Confirmation</button>
+  </form>
+
+  <div id="receipt" style="display:none; margin-top:20px; background:#0c2e4c; padding:15px; border-radius:5px;">
+    <h3>✅ Payment Submitted</h3>
+    <p>Thank you for confirming your payment. We'll verify and contact you shortly via WhatsApp.</p>
+  </div>
+</div>
+
+<script>
+  function showReceipt() {
+    document.getElementById("receipt").style.display = "block";
+    return false; // Prevent form from actually submitting
+  }
+</script>
+<select class="verifications">
+  <h2>Social Media Verification Numbers</h2>
+  <p>Select from the platforms below. Each number is available for ₦3,700 only.</p>
+
+  <div class="verification-list">
+    <div class="verify-item">
+      <img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook" />
+      <p>Facebook Verification</p>
+    </div>
+    <div class="verify-item">
+      <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" />
+      <p>Instagram Verification</p>
+    </div>
+    <div class="verify-item">
+      <img src="https://img.icons8.com/color/48/twitter--v1.png" alt="Twitter" />
+      <p>Twitter/X Verification</p>
+    </div>
+    <div class="verify-item">
+      <img src="https://img.icons8.com/color/48/tiktok--v1.png" alt="TikTok" />
+      <p>TikTok Verification</p>
+    </div>
+    <div class="verify-item">
+      <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Gmail" />
+      <p>Gmail/YouTube Verification</p>
+    </div>
+  </div>
+</select>
+</body>
+</html>
